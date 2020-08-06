@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  database:
+    image: mysql:8.0
+    networks:
+      - common-network
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=demo
+      - MYSQL_PASSWORD=artifact
+      - MYSQL_DATABASE=demoappdb
+  web-service:
+    image: demo
+    restart: always
+    depends_on:
+      - database
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - common-network
+
+
+networks:
+  common-network:
+    driver: bridge
+
+#volumes:
+#  db_data: {}
