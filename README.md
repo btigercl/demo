@@ -1,8 +1,7 @@
 #Demo Shopping Cart API
 
 ###Summary
-This is a backend focused, small shopping cart api demo that allows a user to create a cart, add products, update product qty, and delete items. Each call returns an updated cart that will be rendered by the frontend. Because carts need greater reliability and persistence, the backend receives, persists, and returns an updated cart upon each call. The frontend should have to do little work besides rendering the json upon change and validating any data sent to the API. In a full application, the cart would be associated with a session, and this app would be using the session to retrieve the cart id. 
-
+This is a backend focused, small shopping cart api demo that allows a user to create a cart, add products, update product qty, and delete items. Each call returns an updated cart that will be rendered by the frontend. Because carts need greater reliability and persistence, the backend receives, persists, and returns an updated cart upon each call. The frontend should have to do little work besides rendering the json upon change and validating any data sent to the API.
 
 ###Technologies Used
 	- Spring Boot 2
